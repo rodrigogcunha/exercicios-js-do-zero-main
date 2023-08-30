@@ -73,17 +73,6 @@ Dica:
 Você pode usar um loop dentro da função. 
 */
 
-const pegaNomeConcurso = (id) => {
-  let nomeConcurso = ''
-  
-  for (let i = 0; i < concursos.length; i++) {
-    if (id === concursos[i].id) {
-      nomeConcurso = concursos[i].nome
-    }
-  }
-
-  return nomeConcurso || 'Concurso não encontrado'
-}
 
 
 const concursos = [
@@ -94,12 +83,6 @@ const concursos = [
   { id: 'd687jsfke', nome: 'Concurso Programadores Garotos de Programa' },
 ]
 
-
-for (let i = 0; i < concursos.length; i++){
-  console.log(pegaNomeConcurso(concursos[i].id))
-}
-
-console.log(pegaNomeConcurso())
 
 /*
 03
