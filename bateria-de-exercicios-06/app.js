@@ -74,6 +74,16 @@ Você pode usar um loop dentro da função.
 */
 
 
+const pegaNomeConcurso = (id) => {
+  let nomeConcurso = ''
+  for (let i = 0; i < concursos.length; i++) {
+    if (id === concursos[i].id) {
+      console.log(concursos[i].nome)
+      nomeConcurso = concursos[i].nome
+    }
+  }
+  return nomeConcurso || 'nome não encontrado'
+}
 
 const concursos = [
   { id: 'ysdyhsa8a', nome: 'Concurso Loteria XPTO' },
@@ -83,7 +93,11 @@ const concursos = [
   { id: 'd687jsfke', nome: 'Concurso Programadores Garotos de Programa' },
 ]
 
+for (let i = 0; i < concursos.length; i++) {
+  console.log(pegaNomeConcurso(concursos[i].id))
+}
 
+console.log(pegaNomeConcurso())
 /*
 03
 
@@ -98,8 +112,13 @@ const eAMelhorSerie = serie => {
   return '❌ Não'
 }
 
-eAMelhorSerie('Breaking Bad')
-eAMelhorSerie('Game of Thrones')
+console.log(eAMelhorSerie('Breaking Bad'))
+console.log(eAMelhorSerie('Game of Thrones'))
+
+const eAMelhorSerie2 = serie => serie === 'Breaking Bad' ? '✅ Sim' : '❌ Não'
+
+  
+  console.log(eAMelhorSerie2('Breaking Bad'))
 
 /*
 04
@@ -120,6 +139,16 @@ Para obter a média, basta dividir a soma total dos custos
 pela quantidade de meses.
 */
 
+const mediaTotal = (custos) => {
+  let soma = 0
+
+  for (let i = 0; i < custos.length; i++) {
+    soma += custos[i].custoTotal
+  }
+  return soma / custos.length
+  
+}
+
 const custos = [
   { mes: 'janeiro', custoTotal: 5672 },
   { mes: 'fevereiro', custoTotal: 2357 },
@@ -127,6 +156,9 @@ const custos = [
   { mes: 'abril', custoTotal: 6325 },
   { mes: 'maio', custoTotal: 6748 },
 ]
+
+
+console.log(`A média é ${mediaTotal(custos)}`)
 
 /*
 05
@@ -140,7 +172,21 @@ A função deve retornar um array.
 Teste a função utilizando o array abaixo.
 */
 
+const filtraPalavras = (palavras) => {
+  let filtradas = []
+
+  for (let i = 0; i < palavras.length; i++) {
+    if (palavras[i].length > 3) {
+      filtradas.push(palavras[i])
+    }
+  }
+  return filtradas
+
+}
+
 const palavras = ['ovo', 'áudio', 'oi', 'telefones', 'ovni']
+
+console.log(filtraPalavras(palavras))
 
 /*
 06
