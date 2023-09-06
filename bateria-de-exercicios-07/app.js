@@ -36,18 +36,14 @@ Use as invocações abaixo da função para testá-la.
 
 const eUndefined = arg => arg === undefined
 
-const multiplicar = (a, b, c) => {
-  if (eUndefined(a) || eUndefined(b) || eUndefined(c)) {
-    return 'Insira todos os argumentos!'
-  }
+const multiplicar = (a, b, c) => indefinido = (eUndefined(a) || eUndefined(b) || eUndefined(c)) ? 'Insira todos os argumentos!' : a * b * c 
 
-  return a * b * c
-}
 
-multiplicar()
-multiplicar(1)
-multiplicar(1, 2)
-multiplicar(1, 2, 3)
+console.log(multiplicar())
+console.log(multiplicar(1))
+console.log(multiplicar(1, 2))
+console.log(multiplicar(1, 2, 3))
+
 
 /*
 03
