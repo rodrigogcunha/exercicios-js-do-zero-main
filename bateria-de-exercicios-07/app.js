@@ -88,11 +88,11 @@ const somar = (arg1, arg2, arg3) => {
   return null
 }
 
-// console.log('somar(1):', somar(1))
-// console.log('somar(1, 2):', somar(1, 2))
-// console.log('somar(1, 2, 3):', somar(1, 2, 3))
-// console.log('somar():', somar())
-// console.log('somar(undefined, 1, 2):', somar(undefined, 1, 2))
+console.log('somar(1):', somar(1))
+console.log('somar(1, 2):', somar(1, 2))
+console.log('somar(1, 2, 3):', somar(1, 2, 3))
+console.log('somar():', somar())
+console.log('somar(undefined, 1, 2):', somar(undefined, 1, 2))
 
 /*
 04
