@@ -19,11 +19,11 @@ A função deve retornar a string 'Tá certo?'.
 */
 
 const consertaPalavra = str => {
-  str[3] = 'c'
-  return str
+  const teste = str.replace('serto', 'certo')
+  return teste
 }
 
-// console.log(consertaPalavra('Tá serto?'))
+console.log(consertaPalavra('Tá serto?'))
 
 /* 
 02
