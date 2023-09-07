@@ -137,19 +137,23 @@ continuar retornando true.
 
 const versaoOficial = 7
 
-const saoMesmaVersao = obj => {
-  let mesmaVersao = true
+const saoMesmaVersao = obj => obj.versoes.every(arr => arr[0] === versaoOficial)
 
-  obj.versoes.forEach(arrVersao => {
-    const versao = arrVersao[0]
 
-    if (versao !== versaoOficial) {
-      mesmaVersao = false
-    }
-  })
 
-  return mesmaVersao
-}
+// const saoMesmaVersao = obj => {
+//   let mesmaVersao = true
+
+//   obj.versoes.forEach(arrVersao => {
+//     const versao = arrVersao[0]
+
+//     if (versao !== versaoOficial) {
+//       mesmaVersao = false
+//     }
+//   })
+
+//   return mesmaVersao
+// }
 
 console.log(saoMesmaVersao({ versoes: [[7], [8], [9]]}))
 console.log(saoMesmaVersao({ versoes: [[7], [7], [7]]}))
