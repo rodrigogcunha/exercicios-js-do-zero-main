@@ -183,6 +183,10 @@ const arquivos = [
   ...perigo.git.arquivosModificados
 ]
 
+const saoArquivosJs = arquivos.every(arquivo => arquivo.includes('js'))
+
+console.log(saoArquivosJs)
+
 /*
 07
 
