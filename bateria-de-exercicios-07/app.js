@@ -70,7 +70,8 @@ const somar = (arg1, arg2, arg3) => {
   const temSoArg1 = !eUndefined(arg1) && eUndefined(arg2) && eUndefined(arg3)
   const temSoArg1E2 = !eUndefined(arg1) && !eUndefined(arg2) && eUndefined(arg3)
   const temTodosArgs = !eUndefined(arg1) && !eUndefined(arg2) && !eUndefined(arg3)
-  const temNenhumArg = eUndefined(arg1) && eUndefined(arg2) && eUndefined(arg3)
+  const temNenhumArg = [arg1, arg2, arg3].every(eUndefined)
+  // const temNenhumArg = eUndefined(arg1) && eUndefined(arg2) && eUndefined(arg3)
 
   if (temSoArg1) {
     return arg1
@@ -111,10 +112,14 @@ Dica:
 Você pode substituir o for loop. 
 */
 
-const numerosDobrados = [1, 2, 3]
+const dobrar = numeros => {
+  const numerosDobrados = []
 
-numerosDobrados.forEach((numeros) => console.log(numeros * 2))
+  numeros.forEach(numero => numerosDobrados.push(numero * 2))
+  return numerosDobrados
+}
 
+console.log(dobrar([2, 4, 6]))
 
 /* 
 05
