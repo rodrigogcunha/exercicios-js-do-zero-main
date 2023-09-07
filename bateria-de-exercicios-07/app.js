@@ -200,8 +200,13 @@ Teste sua função usando os dois arrays abaixo.
 Não use for loop nem forEach. 
 */
 
+
 const bandasAnos60 = ['Pink Floyd', 'Deep Purple', 'Black Sabbath', 'Led Zeppelin']
 const bandasAnos70 = ['Queen', 'Eagles', 'Aerosmith', 'AC/DC', 'Journey', 'Kiss']
+
+const juntar = (arr1, arr2) => [...arr1, ...arr2]
+
+console.log(juntar(bandasAnos60, bandasAnos70))
 
 /*
 08
@@ -218,8 +223,8 @@ propriedades do objeto original (id e nome).
 */
 
 const mudaNomeProduto = produto => {
-  produto.nome += ' - PlayStation 5'
-  return produto
+  // produto.nome += ' - PlayStation 5'
+  return {...produto, nome: produto.nome + ' - PlayStation 5'}
 }
 
 const produtos = [
@@ -231,3 +236,7 @@ const produtos = [
 ]
 
 const novoProduto = mudaNomeProduto(produtos[0])
+
+console.log(novoProduto)
+
+console.log(produtos)
