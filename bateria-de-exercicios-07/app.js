@@ -88,11 +88,11 @@ const somar = (arg1, arg2, arg3) => {
   return null
 }
 
-console.log('somar(1):', somar(1))
-console.log('somar(1, 2):', somar(1, 2))
-console.log('somar(1, 2, 3):', somar(1, 2, 3))
-console.log('somar():', somar())
-console.log('somar(undefined, 1, 2):', somar(undefined, 1, 2))
+ console.log('somar(1):', somar(1))
+ console.log('somar(1, 2):', somar(1, 2))
+ console.log('somar(1, 2, 3):', somar(1, 2, 3))
+ console.log('somar():', somar())
+ console.log('somar(undefined, 1, 2):', somar(undefined, 1, 2))
 
 /*
 04
@@ -108,17 +108,10 @@ Dica:
 Você pode substituir o for loop. 
 */
 
-const dobrar = numeros => {
-  const numerosDobrados = []
+const numerosDobrados = [1, 2, 3]
 
-  for (let i = 0; i < numeros.length; i++) {
-    numerosDobrados.push(numeros[i] * 2)
-  }
+numerosDobrados.forEach((numeros) => console.log(numeros * 2))
 
-  return numerosDobrados
-}
-
-dobrar([1, 2, 3])
 
 /* 
 05
