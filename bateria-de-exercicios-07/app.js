@@ -36,7 +36,11 @@ Use as invocações abaixo da função para testá-la.
 
 const eUndefined = arg => arg === undefined
 
-const multiplicar = (a, b, c) => indefinido = (eUndefined(a) || eUndefined(b) || eUndefined(c)) ? 'Insira todos os argumentos!' : a * b * c 
+const multiplicar = (a, b, c) => {
+  return ([a, b, c].includes(undefined)) ? 'Insira todos os argumentos' : a * b * c
+
+} 
+  
 
 
 console.log(multiplicar())
@@ -143,8 +147,8 @@ const saoMesmaVersao = obj => {
   return mesmaVersao
 }
 
-saoMesmaVersao({ versoes: [[7], [8], [9]]})
-saoMesmaVersao({ versoes: [[7], [7], [7]]})
+console.log(saoMesmaVersao({ versoes: [[7], [8], [9]]}))
+console.log(saoMesmaVersao({ versoes: [[7], [7], [7]]}))
 
 /*
 06
