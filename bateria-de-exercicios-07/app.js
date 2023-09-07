@@ -36,10 +36,9 @@ Use as invocações abaixo da função para testá-la.
 
 const eUndefined = arg => arg === undefined
 
-const multiplicar = (a, b, c) => {
-  return ([a, b, c].includes(undefined)) ? 'Insira todos os argumentos' : a * b * c
+const multiplicar = (a, b, c) => ([a, b, c]
+  .includes(undefined)) ? 'Insira todos os argumentos' : a * b * c
 
-} 
   
 
 
