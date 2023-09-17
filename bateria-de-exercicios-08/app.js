@@ -113,7 +113,11 @@ do primeiro objeto do array e code do segundo objeto.
 Evite a repetição de "arr[index]" em seu código.
 */
 
+const multiply = ([obj1, obj2]) => obj1.id * obj2.code
+
 const objs = [{ id: 3, code: 31 }, { id: 7, code: 21 }]
+
+console.log(multiply(objs))
 
 /*
 04
