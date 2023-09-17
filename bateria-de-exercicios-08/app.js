@@ -42,10 +42,20 @@ const person = {
 
 const person2 = {
   ...person,
-  name: 'Joana Cruz'
+  name: 'Joana Cruz',
+  address: {
+    ...person.address,
+    street: "Rua Rio de Janeiro"
+  }
+  
 }
 
-person2.address.street = 'Rua Rio de Janeiro'
+//person2.address.street = 'Rua Rio de Janeiro'
+console.log(person)
+console.log(person2)
+console.log(person.address.street !== person2.address.street)
+console.log(person.address !== person2.address)
+
 
 /*
 02
@@ -72,6 +82,24 @@ const getHeroes = () => [
   { name: 'Wonder Woman', realName: 'Diana Prince', gender: 'Female' },
   { name: 'Spider-Man', realName: 'Peter Parker', gender: 'Male' }
 ]
+
+const getMessage = (arr) => {
+    let message = ''
+    arr.forEach(({name, realName, gender}, index) => {
+      const preposition = gender === 'Male' ? 'do' : 'da'
+      const heroGender = gender === 'Male' ? 'herói' : 'heroína'
+      
+      message += `O nome ${preposition} ${heroGender} no item ${index + 1} é ${name} e seu nome verdadeiro é ${realName}.\n`
+    });
+
+    return message
+}
+
+const heroes = getHeroes()
+const message = getMessage(heroes)
+
+console.log(heroes)
+console.log(message)
 
 /*
 03
