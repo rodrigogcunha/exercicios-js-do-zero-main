@@ -188,22 +188,23 @@ fizemos anteriormente.
 Renomeie o que está em português para inglês.
 */
 
-const pegaRespostasUsuario = () => ['A', 'B', 'A', 'D']
+const getUserAnswers = () => ['A', 'B', 'A', 'D']
 
-const pegaPontuacao = respostasUsuario => {
-  const ultimaResposta = respostasUsuario[3]
+const getScore = userAnswers => {
+  const lastAnswer = userAnswers[3]
 
-  if (ultimaResposta === 'A') {
+  if (lastAnswer === 'A') {
     return 50
-  } else if (ultimaResposta === 'C') {
+  } else if (lastAnswer === 'C') {
     return 25
   } else {
     return 100
   }
 }
 
-const respostasUsuario = pegaRespostasUsuario()
-const pontuacao = pegaPontuacao(respostasUsuario)
+const userAnswers = getUserAnswers()
+const score = getScore(userAnswers)
+console.log(score)
 
 /*
 07
