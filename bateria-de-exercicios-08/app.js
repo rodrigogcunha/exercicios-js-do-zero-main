@@ -138,10 +138,11 @@ const getfruitBenefits = fruit => {
     uva: 'Rica em carboidratos, altamente energética.'
   }
 
-  return fruits.fruit || 'Não há informações da fruta =/'
+  return fruits[fruit] || 'Não há informações da fruta =/'
 }
 
 const benefits = getfruitBenefits('uva')
+console.log(benefits)
 
 /*
 05
