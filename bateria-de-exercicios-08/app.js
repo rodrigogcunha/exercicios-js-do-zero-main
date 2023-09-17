@@ -141,7 +141,7 @@ const getfruitBenefits = fruit => {
   return fruits[fruit] || 'Não há informações da fruta =/'
 }
 
-const benefits = getfruitBenefits('uva')
+const benefits = getfruitBenefits('banana')
 console.log(benefits)
 
 /*
@@ -167,7 +167,7 @@ const updateInfo = product => {
   const action = name.includes('size-') ? 'UPDATE_SIZE' : 'UPDATE_FIELD'
   const fieldName = name.includes('size-') ? name.replace('size-', '') : name
 
-  return { type: action, payload: { fieldName: value } }
+  return { type: action, payload: {[fieldName]: value } }
 }
 
 const product = updateInfo({ 
@@ -176,6 +176,8 @@ const product = updateInfo({
     value: 'Jaqueta Trucker Jeans Com Recortes E Forro De Sherpa Azul Claro' 
   }
 })
+
+console.log(product)
 
 /*
 06
